@@ -13,7 +13,7 @@ Given a string text, return a boolean representing if the text is a palindrome o
 ## Examples
 
 ```js
-solution.isPalindrome("kayak"); // true
+isPalindrome("kayak"); // true
 
-solution.isPalindrome("challenge"); // false
+isPalindrome("challenge"); // false
 ```
