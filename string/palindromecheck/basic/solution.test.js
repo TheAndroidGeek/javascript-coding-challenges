@@ -12,6 +12,14 @@ test("' aba' is not a palindrome", () => {
   expect(solution.isPalindrome(" aba")).toBe(false);
 });
 
+test("'aba.' is not a palindrome", () => {
+  expect(solution.isPalindrome("aba ")).toBe(false);
+});
+
+test("'.aba' is not a palindrome", () => {
+  expect(solution.isPalindrome(" aba")).toBe(false);
+});
+
 test("'challenge' is not a palindrome", () => {
   expect(solution.isPalindrome("challenge")).toBe(false);
 });
