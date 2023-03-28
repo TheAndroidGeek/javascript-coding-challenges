@@ -6,7 +6,7 @@ EASY
 
 ## Challenge
 
-Given an array of integer, return a sorted version of that array.
+Given an array of integers, return a sorted version of that array.
 
 [Solutions](solution.js) | [Tests](solution.test.js)
 
