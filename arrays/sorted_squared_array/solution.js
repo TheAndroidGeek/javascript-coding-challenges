@@ -16,32 +16,26 @@ function solution1(array) {
 
 // Use iterative
 // Time: O(n)
-// Space: O(1)
+// Space: O(n)
 function solution2(array) {
+  let sortedSquares = []; // new array required
   let leftIndex = 0;
   let rightIndex = array.length - 1;
 
-  for (let i = array.length - 1; i > 0; i--) {
+  for (let i = array.length - 1; i >= 0; i--) {
     let leftValue = Math.abs(array[leftIndex]); // smaller
     let rightValue = Math.abs(array[rightIndex]); // larger
 
     if (leftValue > rightValue) {
-      swap(leftIndex, rightIndex, array);
-      array[i] = leftValue * leftValue;
-      rightIndex--;
+      sortedSquares[i] = leftValue * leftValue;
+      leftIndex++;
     } else {
-      array[i] = rightValue * rightValue;
+      sortedSquares[i] = rightValue * rightValue;
       rightIndex--;
     }
   }
 
-  return array;
-}
-
-function swap(leftIndex, rightIndex, array) {
-  let temp = array[leftIndex];
-  array[leftIndex] = array[rightIndex];
-  array[rightIndex] = temp;
+  return sortedSquares;
 }
 
 exports.sort = sort;
