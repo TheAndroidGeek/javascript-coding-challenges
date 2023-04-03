@@ -58,4 +58,18 @@ function solution3(array, targetSum) {
   return [];
 }
 
+// Time: O(n)
+// Space: O(n)
+function solution4(nums, target) {
+  const hashTable = {};
+  for (let i = 0; i < nums.length; i++) {
+    const diff = target - nums[i];
+    if (diff in hashTable) {
+      return [diff, nums[i]];
+    }
+    hashTable[nums[i]] = true;
+  }
+  return [];
+}
+
 exports.findTwoNumberSum = findTwoNumberSum;
